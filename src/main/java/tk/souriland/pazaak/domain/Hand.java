@@ -41,7 +41,11 @@ public class Hand implements ActionListener {
     }
 
     public Card[] getCards() {
-        return cards;
+        Card[] copy = new Card[cards.length];
+
+        System.arraycopy(cards, 0, copy, 0, cards.length);
+
+        return copy;
     }
 
     public void fill(SideDeck deck) {

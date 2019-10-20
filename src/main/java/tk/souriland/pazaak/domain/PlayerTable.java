@@ -24,6 +24,7 @@
 package tk.souriland.pazaak.domain;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.ListIterator;
 import tk.souriland.pazaak.domain.card.Card;
@@ -38,7 +39,7 @@ public class PlayerTable {
     private final List<Card> cards = new ArrayList<>();
 
     public List<Card> getCards() {
-        return cards;
+        return Collections.unmodifiableList(cards);
     }
 
     public int getScore() {
